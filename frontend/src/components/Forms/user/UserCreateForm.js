@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import { LockOutlined, MailOutlined, UserOutlined } from '@ant-design/icons';
+import { useState } from 'react';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { createUserRoute } from '../../../routes/UserRoutes';
-import './style.css';
-
-import Input from "../../Input"
 import { useNotificationApi } from "../../Alert"
 import { createLoginRoute } from '../../../routes/LoginRoutes';
+import { useNavigate } from 'react-router-dom';
+import Input from "../../Input"
+import './style.css';
 
 const Register = () => {
     const notification = useNotificationApi();
-    const [error, setError] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordRetype, setPasswordRetype] = useState('');
+
+    const navigate = useNavigate();
 
     const resetValues = () => {
         setName("")
@@ -25,35 +26,23 @@ const Register = () => {
     const handleRegister = async (event) => {
         event.preventDefault()
 
-        if (!name || !email || !password || !passwordRetype) {
-            setError("Todos os campos devem ser preenchidos");
-            return;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            setError("O e-mail informado não é válido");
-            return;
-        }
-
-        if (password !== passwordRetype) {
-            setError("As senhas não correspondem");
-            return;
-        }
-
         try {
             const response = await createUserRoute({ name, email, password });
-            await createLoginRoute({ email, password });
+            if (response) { await createLoginRoute({ email, password });}
+            setTimeout(() => {
+                navigate('/planning');
+            }, 2000);
             notification.success({
-                message: 'Sucesso!',
+                message: 'Success!',
                 description: response.data.message,
             });
-            resetValues()
-        } catch (error) {
+            resetValues();
+        } catch (error) { 
             const data = error.response.data;
+            const message = data.error ?? data.message ?? "Server is not running!";
             notification.error({
-                message: "Error!",
-                description: "Error: " + (data.error ?? data.message ?? "Server is not running!"),
+                message: 'Error!',
+                description: message,
             });
         }
     }
@@ -89,10 +78,7 @@ const Register = () => {
                             setData={[setPassword, setPasswordRetype]}
                         />
 
-                        <div className="input-error">
-                            <span>{error}</span>
-                        </div>
-                        <button onClick={handleRegister}>Register</button>
+                        <button onClick={handleRegister}>Cadastrar novo usuário</button>
                     </div>
                 </form>
             </div>

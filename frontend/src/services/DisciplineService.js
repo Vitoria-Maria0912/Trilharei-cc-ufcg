@@ -15,10 +15,10 @@ const DisciplineService = () => {
           <Breadcrumb.Item>Disciplinas</Breadcrumb.Item>
         </Breadcrumb>
         <Routes>
+            <Route path="/" element={ <ShowAllDisciplinesForm/> }/>
             <Route path="/create" element={ <DisciplineCreateForm/> }/> 
             <Route path="/update" element={ <DisciplinePatchForm/> }/> 
             <Route path="/getOne" element={ <ShowOneDisciplineForm/> }/>
-            <Route path="/getAll" element={ <ShowAllDisciplinesForm/> }/>
         </Routes>
         <Outlet/>
     </div>

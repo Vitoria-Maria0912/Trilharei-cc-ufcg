@@ -1,20 +1,6 @@
 #!/bin/bash
 
-# Deleta usuário
-curl -X DELETE http://localhost:8080/users/0 
-
-# Cria usuário
-curl -X POST http://localhost:8080/users \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": 0,
-    "name": "Vitória Maria",
-    "email": "vitoria.nascimento@ccc.ufcg.edu.br",
-    "password": "@ccc.ufcg.edu.br",
-    "role": "ADMINISTRATOR"
-  }'
-
-RESPONSE=$(curl -s -X POST http://localhost:8080/auth/login \
+RESPONSE=$(curl -s -X POST http://localhost:8080/login/getTokenByUserEmail \
   -H "Content-Type: application/json" \
   -d '{ 
         "email":"vitoria.nascimento@ccc.ufcg.edu.br",
@@ -23,7 +9,7 @@ RESPONSE=$(curl -s -X POST http://localhost:8080/auth/login \
 
 echo "Resposta da API de login: $RESPONSE"
 
-TOKEN=$(echo "$RESPONSE" | jq -r '.token')
+TOKEN=$(echo "$RESPONSE" | jq -r '.login .token')
 
 # Verifica se o token foi realmente capturado
 if [ -z "$TOKEN" ] || [ "$TOKEN" == "null" ]; then
@@ -32,8 +18,8 @@ if [ -z "$TOKEN" ] || [ "$TOKEN" == "null" ]; then
 fi
 
 # Caminho para JSON e URL da API
-JSON_FILE_OBRIGATORY="./database/Obrigatories.json"
-JSON_FILE_OPTATIVE="./database/Optatives.json"
+JSON_FILE_OBRIGATORY="./database/Obrigatories_pre_post_req.json"
+JSON_FILE_OPTATIVE="./database/Optatives_pre_post_req.json"
 URL="http://localhost:8080/protected/disciplines"
 
 # Verifica se o jq está instalado
@@ -42,20 +28,22 @@ if ! command -v jq &> /dev/null; then
   exit 1
 fi
 
-# Loop para enviar disciplinas
+# Loop para atualizar as disciplinas
 jq -c '.[]' "$JSON_FILE_OBRIGATORY" | while read -r disciplina; do
-  echo "Enviando: $disciplina"
-  curl -X POST "$URL" \
+  DISCIPLINA_ID=$(echo "$disciplina" | jq -r '.id')
+  echo "Atualizando disciplina ID $DISCIPLINA_ID: $disciplina"
+  curl -X PATCH "$URL/$DISCIPLINA_ID" \
     -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" \
     -d "$disciplina"
   echo -e "\n---"
 done
 
-# Loop para enviar disciplinas
+# Loop para atualizar as disciplinas
 jq -c '.[]' "$JSON_FILE_OPTATIVE" | while read -r disciplina; do
-  echo "Enviando: $disciplina"
-  curl -X POST "$URL" \
+  DISCIPLINA_ID=$(echo "$disciplina" | jq -r '.id')
+  echo "Atualizando disciplina ID $DISCIPLINA_ID: $disciplina"
+  curl -X PATCH "$URL/$DISCIPLINA_ID"  \
     -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" \
     -d "$disciplina"

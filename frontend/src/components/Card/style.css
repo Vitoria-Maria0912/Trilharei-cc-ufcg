@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #d9643a;
+    background-color: var(--button-color);
     cursor: pointer;
     position: relative;
 }
@@ -15,7 +15,8 @@
 }
 
 .card:hover {
-    background-color: #b45430;
+    cursor: pointer;
+    background-color: var(--button-hover-color);
 }
 
 .anticon-delete {

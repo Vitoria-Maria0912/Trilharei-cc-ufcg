@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createDisciplineRoute } from '../../../../routes/DisciplineRoutes';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import { Trash2 } from 'lucide-react';
 import './style.css'
+import { useNotificationApi } from '../../../Alert';
 
 const DisciplineCreateForm = () => {
+
+  const notification = useNotificationApi();
+
   const [form, setForm] = useState({
     type: 'OBRIGATORY',
     name: '',
@@ -17,14 +21,36 @@ const DisciplineCreateForm = () => {
     schedule: 'Undefined',
   });
 
+  const resetValues = () => {
+    setForm({
+      type: 'OBRIGATORY',
+      name: '',
+      acronym: '',
+      available: true,
+      description: '',
+      pre_requisites: [],
+      post_requisites: [],
+      professor: 'Undefined',
+      schedule: 'Undefined',
+      });
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await createDisciplineRoute(form);
-      alert(response.data.message);
+      notification.success({
+            message: 'Success!',
+            description: response.data.message,
+      });
+      resetValues();
     } catch (error) { 
-      const data = error.response.data;
-      alert("Error: " + (data.error ?? data.message ?? "Server is not running!")); 
+        const data = error.response.data;
+        const message = data.error ?? data.message ?? "Server is not running!";
+        notification.error({
+            message: 'Error!',
+            description: message,
+        });
     }
   };
 

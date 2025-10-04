@@ -2,12 +2,12 @@
     {
       "id": 0,
       "name": "Direito e Cidadania",
-      "acronym": "D&C"
+      "acronym": "Direito"
     },
     {
       "id": 1,
       "acronym": "FMCC1",
-      "name": "Fundamentos de Matemática para Ciência Computação I"
+      "name": "Fundamentos de Matemática para Ciência da Computação I"
     },
     {
       "id": 2,
@@ -36,7 +36,7 @@
     },
     {
       "id": 7,
-      "name": "Fundamentos de Matemática para Ciência Computação II",
+      "name": "Fundamentos de Matemática para Ciência da Computação II",
       "acronym": "FMCC2"
     },
     {

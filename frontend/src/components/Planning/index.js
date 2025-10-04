@@ -39,7 +39,7 @@ const Planning = () => {
                             setCurrentPlanning({
                                 ...planning,
                                 name: `Planejamento ${index + 1}`,
-                                periods: [...planning.periods].sort((a, b) => Number(a.name) - Number(b.name)),
+                                periods: [...planning.periods].sort((p1, p2) => p1.name.toLowerCase().localeCompare(p2.name.toLowerCase())),
                             });
                         }}
                         rel="noopener noreferrer"
@@ -89,7 +89,7 @@ const Planning = () => {
 
                             const normalize = str => str.toLowerCase().trim();
                             const foundDisciplines = disciplineNames.map((name) => {
-                                const found = allDisciplines.find((d) => normalize(d.acronym) === normalize(name));
+                                const found = allDisciplines.find((d) => (normalize(d.name) === normalize(name)) || (normalize(d.acronym) === normalize(name)));
                                 if (!found) console.warn(`Disciplina com acrônimo "${name}" não encontrada.`);
                                 return found;
                             }).filter(Boolean);

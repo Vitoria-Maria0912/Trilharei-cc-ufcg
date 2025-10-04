@@ -1,29 +1,29 @@
 [
     {
-      "id": 36,
-      "name": "Administração de Sistemas Gerenciais de Banco de Dados",
-      "acronym": "ASGBD",
-      "type": "OPTATIVE",
-      "available": false,
-      "description": "Disciplina sobre gerenciamento e administração de bancos de dados avançados."
+        "id": 36,
+        "name": "Administração de Sistemas Gerenciais de Banco de Dados",
+        "acronym": "ASGBD",
+        "type": "OPTATIVE",
+        "available": false,
+        "description": "Disciplina sobre gerenciamento e administração de bancos de dados avançados."
     },
     {
-      "id": 37,
-      "acronym": "ADS",
-      "name": "Administração de Sistemas",
-      "type": "OPTATIVE",
-      "available": false,
-      "description": "Disciplina sobre administração e configuração de sistemas computacionais.",
-      "teacher": "Giovanni"
+        "id": 37,
+        "acronym": "ADS",
+        "name": "Administração de Sistemas",
+        "type": "OPTATIVE",
+        "available": false,
+        "description": "Disciplina sobre administração e configuração de sistemas computacionais.",
+        "professor": "Giovanni"
     },
     {
-      "id": 38,
-      "name": "Algoritmos Avançados I",
-      "acronym": "AA1",
-      "type": "OPTATIVE",
-      "available": false,
-      "description": "Disciplina introdutória aos algoritmos avançados, com foco em otimização e eficiência.",
-      "teacher": "Rohit"
+        "id": 38,
+        "name": "Algoritmos Avançados I",
+        "acronym": "AA1",
+        "type": "OPTATIVE",
+        "available": false,
+        "description": "Disciplina introdutória aos algoritmos avançados, com foco em otimização e eficiência.",
+        "professor": "Rohit"
     },
     {
         "id": 39,
@@ -32,7 +32,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Continuação do estudo de algoritmos avançados, explorando algoritmos de busca e ordenação.",
-        "teacher": "Rohit"
+        "professor": "Rohit"
     },
     {
         "id": 40,
@@ -41,7 +41,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina focada em algoritmos complexos e técnicas de análise de algoritmos.",
-        "teacher": "Rohit"
+        "professor": "Rohit"
     },
     {
         "id": 41,
@@ -50,7 +50,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Exploração de algoritmos avançados de ordenação e estrutura de dados.",
-        "teacher": "Rohit"
+        "professor": "Rohit"
     },
     {
         "id": 42,
@@ -59,7 +59,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina sobre design e arquitetura de sistemas de software complexos.",
-        "teacher": "João Arthur"
+        "professor": "João Arthur"
     },
     {
         "id": 43,
@@ -78,43 +78,42 @@
         "description": "Disciplina avançada sobre conceitos e técnicas de bancos de dados."
     },
     {
-        "id": 37,
+        "id": 45,
         "name": "Computação e Música",
         "acronym": "CompMus",
         "type": "OPTATIVE",
         "available": false,
         "description": "Aplicação de conceitos de computação em música.",
-        "teacher": "Marcelo Barros"
+        "professor": "Marcelo Barros"
     },
     {
-        "id": 38,
+        "id": 46,
         "name": "Computação Gráfica",
         "acronym": "CompGraf",
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina sobre técnicas de computação gráfica e sua aplicação."
     },
-   
     {
-        "id": 45,
+        "id": 47,
         "name": "Machine Learning",
         "acronym": "ML",
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina sobre algoritmos e técnicas de aprendizado de máquina.",
-        "teacher": "Cláudio Campelo"
+        "professor": "Cláudio Campelo"
     },
     {
-        "id": 46,
+        "id": 48,
         "name": "Large Language Models",
         "acronym": "LLM",
         "type": "OPTATIVE",
         "available": false,
         "description": "Estudo de técnicas de processamento de linguagem natural com modelos de linguagem de grande escala.",
-        "teacher": "Leandro Balby"
+        "professor": "Leandro Balby"
     },
     {
-        "id": 47,
+        "id": 49,
         "name": "Desenvolvimento de Software Integrado à Operação da Infraestrutura",
         "acronym": "DesPoi",
         "type": "OPTATIVE",
@@ -122,7 +121,7 @@
         "description": "Disciplina sobre integração de software e operação de infraestrutura."
     },
     {
-        "id": 48,
+        "id": 50,
         "name": "Economia de Tecnologia da Informação",
         "acronym": "EconTI",
         "type": "OPTATIVE",
@@ -130,7 +129,7 @@
         "description": "Disciplina sobre a economia relacionada à tecnologia da informação."
     },
     {
-        "id": 49,
+        "id": 51,
         "name": "Empreendedorismo e Inovação",
         "acronym": "Empreendedorismo",
         "type": "OPTATIVE",
@@ -138,7 +137,7 @@
         "description": "Disciplina sobre habilidades de empreendedorismo e inovação tecnológica."
     },
     {
-        "id": 50,
+        "id": 52,
         "name": "Gerência de Redes",
         "acronym": "Gerência de Redes",
         "type": "OPTATIVE",
@@ -146,7 +145,7 @@
         "description": "Disciplina sobre gerência e manutenção de redes de computadores."
     },
     {
-        "id": 51,
+        "id": 53,
         "name": "Gestão de Projetos",
         "acronym": "Gestão de Projetos",
         "type": "OPTATIVE",
@@ -154,16 +153,16 @@
         "description": "Disciplina sobre técnicas e práticas de gestão de projetos."
     },
     {
-        "id": 52,
+        "id": 54,
         "name": "Governaça da Internet",
         "acronym": "Governaça",
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda os modelos e regulamentações de governança da internet.",
-        "teacher": "Francilene Procópio"
+        "professor": "Francilene Procópio"
     },
     {
-        "id": 53,
+        "id": 55,
         "name": "Habilidades Socioemocionais I",
         "acronym": "HS1",
         "type": "OPTATIVE",
@@ -171,7 +170,7 @@
         "description": "Disciplina sobre desenvolvimento de habilidades socioemocionais."
     },
     {
-        "id": 54,
+        "id": 56,
         "name": "Habilidades Socioemocionais II",
         "acronym": "HS2",
         "type": "OPTATIVE",
@@ -179,7 +178,7 @@
         "description": "Continuação do desenvolvimento de habilidades socioemocionais."
     },
     {
-        "id": 55,
+        "id": 57,
         "name": "Informática e Sociedade",
         "acronym": "InfoSoc",
         "type": "OPTATIVE",
@@ -187,7 +186,7 @@
         "description": "Disciplina sobre o impacto da informática na sociedade e suas implicações éticas."
     },
     {
-        "id": 56,
+        "id": 58,
         "name": "Inglês",
         "acronym": "Inglês",
         "type": "OPTATIVE",
@@ -195,43 +194,33 @@
         "description": "Disciplina que aborda a língua inglesa e suas aplicações."
     },
     {
-        "id": 57,
+        "id": 59,
         "name": "Interconexão de Redes de Computadores",
         "acronym": "IRC",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina que estuda a interconexão de redes de computadores",
-        "post_requisites": ["Projeto de Redes de Computadores"]
+        "description": "Disciplina que estuda a interconexão de redes de computadores"
     },
     {
-        "id": 58,
+        "id": 60,
         "name": "Interface Humano-Computador",
         "acronym": "IHC",
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a interface entre o homem e o computador.",
-        "teacher": "Tiago Massoni"
+        "professor": "Tiago Massoni"
     },
     {
-        "id": 59,
+        "id": 61,
         "name": "Jogos Digitais",
         "acronym": "Jogos",
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda os jogos digitais, desde a sua história até a sua programação.",
-        "teacher": "Marcelo Barros"
+        "professor": "Marcelo Barros"
     },
     {
-        "id": 60,
-        "name": "Visualização de Dados",
-        "acronym": "VDD",
-        "type": "OPTATIVE",
-        "available": false,
-        "description": "Disciplina sobre métodos e ferramentas de visualização de dados.",
-        "teacher": "Maxwell Guimarães"
-    },
-    {
-        "id": 61,
+        "id": 62,
         "name": "Libras",
         "acronym": "Libras",
         "type": "OPTATIVE",
@@ -239,7 +228,7 @@
         "description": "Disciplina que estuda a língua brasileira de sinais."
     },
     {
-        "id": 62,
+        "id": 63,
         "name": "Métodos de Software Numéricos",
         "acronym": "MSN",
         "type": "OPTATIVE",
@@ -247,7 +236,7 @@
         "description": "Disciplina que estuda os métodos de software numéricos."
     },
     {
-        "id": 63,
+        "id": 64,
         "name": "Métodos Formais",
         "acronym": "MF",
         "type": "OPTATIVE",
@@ -255,21 +244,12 @@
         "description": "Disciplina que estuda os métodos formais de programação."
     },
     {
-        "id": 64,
+        "id": 65,
         "name": "Otimização",
         "acronym": "Otimização",
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a otimização de problemas computacionais."
-    },
-    {
-        "id": 65,
-        "name": "Deep Learning",
-        "acronym": "DL",
-        "type": "OPTATIVE",
-        "available": false,
-        "description": "Disciplina que estuda o deep learning.",
-        "teacher": "Herman"
     },
     {
         "id": 66,
@@ -278,7 +258,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a percepção computacional.",
-        "teacher": "Herman"
+        "professor": "Herman"
     },
     {
         "id": 67,
@@ -303,7 +283,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda o processamento de linguagem natural.",
-        "teacher": "Leandro Balby | Salatiel"
+        "professor": "Leandro Balby | Salatiel"
     },
     {
         "id": 70,
@@ -312,7 +292,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a programação em banco de dados.",
-        "teacher": "Carlos Eduardo Pires"
+        "professor": "Carlos Eduardo Pires"
     },
     {
         "id": 71,
@@ -321,7 +301,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a programação funcional.",
-        "teacher": "Adalberto Cajueiro"
+        "professor": "Adalberto Cajueiro"
     },
     {
         "id": 72,
@@ -330,7 +310,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a programação para web.",
-        "teacher": "Dalton | Demétrio Mestre"
+        "professor": "Dalton | Demétrio Mestre"
     },
     {
         "id": 73,
@@ -339,7 +319,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a programação para web.",
-        "teacher": "Gaudêncio | Reinaldo | Glauber"
+        "professor": "Gaudêncio | Reinaldo | Glauber"
     },
     {
         "id": 74,
@@ -396,7 +376,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina sobre desenvolvimento de sistemas para suporte à tomada de decisão.",
-        "teacher": "Cláudio Baptista"
+        "professor": "Cláudio Baptista"
     },
     {
         "id": 81,
@@ -413,7 +393,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina sobre princípios e práticas de sistemas distribuídos.",
-        "teacher": "Andrey Elísio"
+        "professor": "Andrey Elísio"
     },
     {
         "id": 83,
@@ -430,7 +410,25 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina sobre técnicas de verificação e validação de software para assegurar a qualidade.",
-        "teacher": "Everton Galdino"
+        "professor": "Everton Galdino"
+    },
+    {
+        "id": 85,
+        "name": "Visualização de Dados",
+        "acronym": "VDD",
+        "type": "OPTATIVE",
+        "available": false,
+        "description": "Disciplina sobre métodos e ferramentas de visualização de dados.",
+        "professor": "Maxwell Guimarães"
+    },
+    {
+        "id": 86,
+        "name": "Deep Learning",
+        "acronym": "DL",
+        "type": "OPTATIVE",
+        "available": false,
+        "description": "Disciplina que estuda o deep learning.",
+        "professor": "Herman"
     }
 ]
   

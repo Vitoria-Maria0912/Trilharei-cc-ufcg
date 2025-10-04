@@ -2,6 +2,9 @@
 
 Este projeto visa facilitar o planejamento de disciplinas do curso de Ciência da Computação da UFCG, permitindo a visualização de disciplinas obrigatórias e optativas, incluindo informações como disponibilidade de professores e requisitos. Administradores podem gerenciar o catálogo de disciplinas por meio de funcionalidades de CRUD.
 
+## Documentação Arquitetural
+- [Substack](https://open.substack.com/pub/ufcgarqsoft/p/vitoria-d0b?r=5xccge&utm_campaign=post&utm_medium=web)
+
 ## Tecnologias utilizadas:
 
 ### Backend

@@ -4,7 +4,7 @@
     height: 50px !important;
     padding: 0px 20px !important;
     color: white !important;
-    background-color: #d9643a !important;
+    background-color: var(--button-color) !important;
     font-weight: bold !important;
     border: none !important;
 }

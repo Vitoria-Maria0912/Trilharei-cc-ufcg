@@ -1,10 +1,10 @@
 SHELL := /bin/bash
 
 create-docker-container:
-	docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=cc_ufcg123 -e POSTGRES_USER=postgres -e POSTGRES_DB=optatives_cc_ufcg postgres
+	docker run -d --name optatives_cc_ufcg -p 5432:5432 -e POSTGRES_PASSWORD=cc_ufcg123 -e POSTGRES_USER=postgres -e POSTGRES_DB=optatives_cc_ufcg postgres
 
 create-podman-container:
-	podman run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=cc_ufcg123 -e POSTGRES_USER=postgres -e POSTGRES_DB=optatives_cc_ufcg postgres
+	podman run -d --name optatives_cc_ufcg -p 5432:5432 -e POSTGRES_PASSWORD=cc_ufcg123 -e POSTGRES_USER=postgres -e POSTGRES_DB=optatives_cc_ufcg postgres
 
 install:
 	npm install
@@ -37,7 +37,14 @@ run-podman:
 			docker.io/library/postgres:latest
 
 access-database:
-	psql -U postgres -d optatives_cc_ufcg -h localhost -p 5432
+	docker exec -it optatives_cc_ufcg psql -U postgres -d optatives_cc_ufcg
+
+create-disciplines:
+	bash database/Create_disciplines.sh 
+	bash database/Update_disciplines.sh 
+
+update-disciplines:
+	bash database/Update_disciplines.sh 
 
 # TEST COMMANDS
 setup-tests:

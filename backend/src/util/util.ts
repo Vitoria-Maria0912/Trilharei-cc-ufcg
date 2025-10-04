@@ -8,7 +8,7 @@ import { AuthenticationError, DisciplineAlreadyRegisteredError, InvalidCredentia
 import { Discipline } from '../model/Discipline';
 import { isBoolean } from 'class-validator';
 import { DisciplineService } from '../service/DisciplineService';
-import { NextFunction, Request, RequestHandler, Response } from 'express';
+import { Request, RequestHandler } from 'express';
 
 const stringOnlyNumbers = new RegExp('^(?!\\d+$).+');
 const stringNumbersAndLetters = new RegExp('^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$')
@@ -189,11 +189,19 @@ export const validateDisciplineFieldsForUpdate = async (updates: Partial<Omit<Di
     if (updates.type !== undefined && updates.type.trim() === "") { throw new InvalidFieldError("Type cannot be empty!"); }
 
     for (const disciplineName of updates.pre_requisites || []) {
-        if ((await validateDisciplineExistence(disciplineName))) { throw new InvalidFieldError(`A pre requisite '${disciplineName}' is invalid, should be a discipline name!`); }
+        let existingDisciplineName = null;
+
+        try { existingDisciplineName = await (new DisciplineService).getOneDisciplineByName(disciplineName); } catch (error) { }
+        
+        if ( !existingDisciplineName ) { throw new InvalidFieldError(`A pre requisite '${disciplineName}' is invalid, should be a discipline name!`); }
     }
 
     for (const disciplineName of updates.post_requisites || []) {
-        if ((await validateDisciplineExistence(disciplineName))) { throw new InvalidFieldError(`A post requisite '${disciplineName}' is invalid, should be a discipline name!`); }
+        let existingDisciplineName = null;
+
+        try { existingDisciplineName = await (new DisciplineService).getOneDisciplineByName(disciplineName); } catch (error) { }
+        
+        if ( !existingDisciplineName ) { throw new InvalidFieldError(`A pre requisite '${disciplineName}' is invalid, should be a discipline name!`); }
     }
     return true;
 }

@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LockOutlined, MailOutlined, UserOutlined } from '@ant-design/icons';
-import { createLoginRoute, getTokenByUserEmailRoute } from '../../../routes/LoginRoutes';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { getTokenByUserEmailRoute } from '../../../routes/LoginRoutes';
 import './style.css';
 import Input from "../../Input"
 import { useNotificationApi } from '../../Alert';
 
 const CreateLogin = () => {
     const notification = useNotificationApi();
-    const [error, setError] = useState('');
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -22,36 +21,25 @@ const CreateLogin = () => {
     const handleLogin = async (event) => {
         event.preventDefault();
 
-        if (!email || !password) {
-            setError("Todos os campos devem ser preenchidos");
-            return;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            setError("O e-mail informado não é válido");
-            return;
-        }
-
         try {
             const response = await getTokenByUserEmailRoute({ email, password });
             localStorage.setItem("token", response.data.login.token);
             setTimeout(() => {
                 navigate('/planning');
             }, 2000);
+
             notification.success({
-                message: 'Sucesso!',
+                message: 'Success!',
                 description: response.data.message,
             });
-            resetValues()
-
-        } catch (error) {
-            console.log(error)
+            
+            resetValues();
+        } catch (error) { 
             const data = error.response.data;
-
+            const message = data.error ?? data.message ?? "Server is not running!";
             notification.error({
-                message: "Error!",
-                description: "Error: " + (data.error ?? data.message ?? "Server is not running!"),
+                message: 'Error!',
+                description: message,
             });
         }
     };
@@ -78,11 +66,7 @@ const CreateLogin = () => {
                         data={password}
                         setData={setPassword}
                     />
-
-                    <div className="input-error">
-                        <span>{error}</span>
-                    </div>
-                    <button onClick={handleLogin}>Criar login</button>
+                    <button onClick={handleLogin}>Login</button>
                 </form>
             </div>
         </div>

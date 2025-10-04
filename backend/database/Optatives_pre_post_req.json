@@ -1,0 +1,164 @@
+[
+    {
+        "id": 36,
+        "pre_requisites": ["Banco de Dados I"]
+    },
+    {
+        "id": 37,
+        "pre_requisites": ["Redes de Computadores", "Sistemas Operacionais"]
+    },
+    {
+        "id": 38,
+        "pre_requisites": ["Programação I", "Laboratório de Programação I"]
+    },
+    {
+        "id": 39,
+        "pre_requisites": ["Programação I", "Laboratório de Programação I"]
+    },
+    {
+        "id": 40,
+        "pre_requisites": ["Programação I", "Laboratório de Programação I"]
+    },
+    {
+        "id": 41,
+        "pre_requisites": ["Programação I", "Laboratório de Programação I"]
+    },
+    {
+        "id": 42,
+        "pre_requisites": ["Projeto de Software"]
+    },
+    {
+        "id": 43,
+        "pre_requisites": ["Introdução à Probabilidade"]
+    },
+    {
+        "id": 44,
+        "pre_requisites": ["Banco de Dados I"]
+    },
+    {
+        "id": 45,
+        "pre_requisites": ["Estruturas de Dados e Algoritmos"]
+    },
+    {
+        "id": 46,
+        "pre_requisites": [
+            "Cálculo Diferencial e Integral I",
+            "Álgebra Linear I",
+            "Estruturas de Dados e Algoritmos"
+        ]
+    },
+    {
+        "id": 48,
+        "pre_requisites": ["Processamento de Linguagem Natural"]
+    },
+    {
+        "id": 49,
+        "pre_requisites": ["Banco de Dados I", "Projeto de Software"]
+    },
+    {
+        "id": 50,
+        "pre_requisites": ["Introdução à Probabilidade"]
+    },
+    {
+        "id": 51,
+        "pre_requisites": ["Engenharia de Software"]
+    },
+    {
+        "id": 52,
+        "pre_requisites": ["Redes de Computadores"]
+    },
+    {
+        "id": 53,
+        "pre_requisites": ["Engenharia de Software"]
+    },
+    {
+        "id": 54,
+        "pre_requisites": ["Redes de Computadores"]
+    },
+    {
+        "id": 59,
+        "pre_requisites": ["Redes de Computadores", "Sistemas Operacionais"],
+        "post_requisites": ["Projeto de Redes de Computadores"]
+    },
+    {
+        "id": 60,
+        "pre_requisites": ["Estruturas de Dados e Algoritmos"]
+    },
+    {
+        "id": 63,
+        "pre_requisites": ["Álgebra Linear I", "Cálculo Diferencial e Integral II"]
+    },
+    {
+        "id": 65,
+        "pre_requisites": ["Álgebra Linear I", "Cálculo Diferencial e Integral II"]
+    },
+    {
+        "id": 66,
+        "pre_requisites": ["Álgebra Linear I", "Cálculo Diferencial e Integral II", "Introdução à Probabilidade"]
+    },
+    {
+        "id": 70,
+        "pre_requisites": ["Banco de Dados I"]
+    },
+    {
+        "id": 71,
+        "pre_requisites": ["Paradigmas de Linguagens de Programação"]
+    },
+    {
+        "id": 72,
+        "pre_requisites": ["Estruturas de Dados e Algoritmos", "Laboratório de Estruturas de Dados e Algoritmos"]
+    },
+    {
+        "id": 73,
+        "pre_requisites": ["Programação para Web I"]
+    },
+    {
+        "id": 74,
+        "post_requisites": ["Interconexão de Redes de Computadores"]
+    },
+    {
+        "id": 75,
+        "pre_requisites": ["Organização e Arquitetura de Computadores"]
+    },
+    {
+        "id": 76,
+        "pre_requisites": ["Redes de Computadores", "Sistemas Operacionais"]
+    },
+    {
+        "id": 77,
+        "pre_requisites": ["Estatística Aplicada", "Inteligência Artificial"]
+    },
+    {
+        "id": 78,
+        "pre_requisites": ["Banco de Dados I"]
+    },
+    {
+        "id": 79,
+        "pre_requisites": ["Redes de Computadores", "Sistemas Operacionais"]
+    },
+    {
+        "id": 80,
+        "pre_requisites": ["Banco de Dados I"]
+    },
+    {
+        "id": 81,
+        "pre_requisites": ["Banco de Dados I"]
+    },
+    {
+        "id": 82,
+        "pre_requisites": ["Redes de Computadores", "Sistemas Operacionais"]
+    },
+    {
+        "id": 84,
+        "pre_requisites": ["Engenharia de Software"]
+    },
+    {
+        "id": 85,
+        "pre_requisites": ["Banco de Dados I", "Estatística Aplicada"]
+    },
+    {
+        "id": 86,
+        "pre_requisites": ["Inteligência Artificial", "Estatística Aplicada"]
+    }
+]
+  

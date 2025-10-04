@@ -12,10 +12,10 @@ const UserService = () => {
           <Breadcrumb.Item>Usuários</Breadcrumb.Item>
         </Breadcrumb>
         <Routes>
-            <Route path="create" element={ <Register/> }/> 
+            <Route path="" element={ <Register/> }/> 
             <Route path="delete" element={ <></> }/>
             <Route path="update" element={ <></> }/> 
-            <Route path="getOne" element={ <></> }/>
+            <Route path="showProfile" element={ <></> }/>
             <Route path="getAll" element={ <></> }/>
         </Routes>
         <Outlet />

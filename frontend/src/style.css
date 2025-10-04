@@ -1,11 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+:root {
+  --white : #FFFFFF;
+  --black : #000000;
+  --light-gray : #9c9c9c;
+  --medium-gray : #5d5b5b;
+  --dark-gray : #333333;
+  --dark-blue : #06129c;
+  --light-blue : #1c5dc7;
+  --light-purple : #9f5eea;
+  --dark-purple : #5f3f9f;
+
+  --font-style : -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-style);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+.light-mode {
+  --bg-color: var(--light-gray);
+  --menu-color: var(--medium-gray);
+  --text-color: var(--white);
+  --input-color: var(--black);
+  --button-color: var(--light-purple);
+  --button-hover-color: var(--dark-purple);
+  --modal-color: var(--light-purple);
+}
+
+.dark-mode {
+  --bg-color: var(--black);
+  --menu-color: var(--dark-gray);
+  --text-color: var(--white);
+  --input-color: var(--black);
+  --button-color: var(--dark-blue);
+  --button-hover-color: var(--light-blue);
+  --modal-color: var(--dark-blue);
 }
 
 code {
@@ -14,33 +48,23 @@ code {
 }
 
 .ant-layout-sider, .ant-menu {
-  background-color: #343535;
-}
-
-.ant-menu-sub {
-  background-color: #252626 !important;
+  background-color: var(--menu-color) !important;
 }
 
 .ant-menu-item-selected {
-  background-color: #d9643a !important;
+  background-color: var(--button-color) !important;
 }
 
 .ant-layout-sider-trigger {
-  background-color: #d9643a !important;
-}
-
-
-.ant-layout, .ant-layout-header, .ant-layout-footer, .ant-layout-content > div {
-  background-color: #454647 !important;
-  color: #ebebeb !important;
+  background-color: var(--button-color) !important;
 }
 
 .ant-breadcrumb span {
-  color: #ebebeb;
+  color: var(--text-color) !important;
 }
 
 .ant-menu-submenu-selected span, .ant-menu-submenu-selected i{
-  color: #ebebeb !important;
+  color: var(--button-color) !important;
 }
 
 .logo {
@@ -51,11 +75,78 @@ code {
 }
 
 .logo .logo-T{
-  color: #d9643a;
+  color: var(--button-color);
   font-size: 40px;
   font-weight: bolder;
 }
 
 .ant-layout-sider-collapsed .logo .logo-text {
   display: none !important;
+}
+
+.ant-layout,
+.ant-layout-header,
+.ant-layout-footer,
+.ant-layout-content {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+h1 {
+    padding-top: 0px;
+    text-align: center;
+    font-size: 40px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#theme-button {
+  position: absolute;
+  right: 1.5%;
+  width: 30px;
+  height: 30px;
+  border-radius: 60px;
+}
+
+.ant-modal-content {
+    background: transparent !important;
+    position: fixed !important;
+    box-shadow: none !important;
+    top: 5%;
+}
+
+.ant-modal-close {
+    margin: 8px 13px !important;
+    background: transparent !important;
+}
+
+.ant-modal-close-x {
+    color: var(--text-color) !important;
+}
+
+.ant-descriptions-bordered {
+  border-radius: 20px;
+  overflow: hidden; 
+  border: 1px solid #cfcfcf
+}
+
+.ant-descriptions-item-content { 
+  background-color: var(--modal-color) ;
+  color: var(--text-color) !important; 
+}
+
+.ant-descriptions-item-label {
+    background-color: var(--button-hover-color) !important;
+    color: var(--text-color) !important; 
+    font-weight: bolder !important;
 }
