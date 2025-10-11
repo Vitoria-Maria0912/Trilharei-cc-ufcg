@@ -11,7 +11,7 @@ import { getAllDisciplinesRoute } from "../../routes/DisciplineRoutes";
 import { useNotificationApi } from "../Alert";
 import { useNavigate } from "react-router-dom";
 import { createPlanning, putPlanning } from "../../routes/PlanningRoutes";
-import { defaultPeriodStructure } from "../util";
+import { defaultPeriodStructure, handleCardHover } from "../util";
 
 const Planning = () => {
     const notification = useNotificationApi();
@@ -24,6 +24,7 @@ const Planning = () => {
     const [currentPeriod, setCurrentPeriod] = useState(null);
     const [select, setSelect] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [highlightedDisciplines, setHighlightedDisciplines] = useState([]);
 
     const hasFetched = useRef(false);
 
@@ -109,7 +110,6 @@ const Planning = () => {
                     try {
                         const response = await createPlanning(newPlanning);
                         const createdPlanning = response.data.createdPlanning;
-
 
                         setPlannings([createdPlanning]);
                         setCurrentPlanning({
@@ -289,28 +289,6 @@ const Planning = () => {
         }
     };
 
-    const [highlightedDisciplines, setHighlightedDisciplines] = useState([]);
-
-    const getDisciplineIdByName = (name) => {
-        const discipline = disciplines.find(discipline => discipline.name === name)
-        return discipline.id
-    }
-
-    const handleCardHover = (discipline) => {
-        const related = new Set();
-
-        const findRelated = (disc) => {
-            disc.pre_requisites?.forEach((name) => related.add(getDisciplineIdByName(name)));
-            disc.post_requisites?.forEach((name) => related.add(getDisciplineIdByName(name)));
-        };
-
-        findRelated(discipline);
-
-        console.log(related)
-
-        setHighlightedDisciplines([...related]);
-    };
-
     const handlePeriodDelete = () => {
         const lastPeriod = currentPlanning.periods[currentPlanning.periods.length - 1]
         if (currentPlanning.periods.length > 1) {
@@ -378,13 +356,13 @@ const Planning = () => {
 
                                     <React.Fragment key={card.id}>
                                         <Card
-                                            onHover={() => handleCardHover(card)}
+                                            onHover={() => setHighlightedDisciplines(handleCardHover(disciplines, card))}
                                             highlight={highlightedDisciplines.includes(card.id)}
                                             card={card}
                                             period={period.id}
                                             canDelete
                                             handleCardDelete={() => handleCardDelete(period.id, card.id)}
-                                            />
+                                        />
                                         <DropZone targetPeriod={period.id} index={index + 1} setCurrentPlanning={setCurrentPlanning} />
                                     </React.Fragment>
                                 ))}

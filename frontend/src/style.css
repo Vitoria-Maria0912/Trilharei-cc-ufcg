@@ -30,6 +30,7 @@ body {
   --button-color: var(--light-purple);
   --button-hover-color: var(--dark-purple);
   --modal-color: var(--light-purple);
+  --card-highlighted-color: var(--light-blue)
 }
 
 .dark-mode {
@@ -40,6 +41,7 @@ body {
   --button-color: var(--dark-blue);
   --button-hover-color: var(--light-blue);
   --modal-color: var(--dark-blue);
+  --card-highlighted-color: var(--light-purple);
 }
 
 code {

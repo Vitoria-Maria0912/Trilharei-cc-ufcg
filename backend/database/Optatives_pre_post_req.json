@@ -106,7 +106,8 @@
     },
     {
         "id": 72,
-        "pre_requisites": ["Estruturas de Dados e Algoritmos", "Laboratório de Estruturas de Dados e Algoritmos"]
+        "pre_requisites": ["Estruturas de Dados e Algoritmos", "Laboratório de Estruturas de Dados e Algoritmos"],
+        "post_requisites": ["Programação para Web I"]
     },
     {
         "id": 73,

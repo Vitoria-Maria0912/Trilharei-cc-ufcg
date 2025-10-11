@@ -75,7 +75,8 @@
         "name": "Banco de Dados II",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina avançada sobre conceitos e técnicas de bancos de dados."
+        "description": "Disciplina avançada sobre conceitos e técnicas de bancos de dados.",
+        "professor": "Carlos Eduardo Pires"
     },
     {
         "id": 45,
@@ -101,7 +102,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina sobre algoritmos e técnicas de aprendizado de máquina.",
-        "professor": "Cláudio Campelo"
+        "professor": "Cláudio Elízio Calazans Campelo"
     },
     {
         "id": 48,
@@ -115,10 +116,11 @@
     {
         "id": 49,
         "name": "Desenvolvimento de Software Integrado à Operação da Infraestrutura",
-        "acronym": "DesPoi",
+        "acronym": "DevOps",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina sobre integração de software e operação de infraestrutura."
+        "description": "Disciplina sobre integração de software e operação de infraestrutura.",
+        "professor": "Giovanni"
     },
     {
         "id": 50,
@@ -167,7 +169,8 @@
         "acronym": "HS1",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina sobre desenvolvimento de habilidades socioemocionais."
+        "description": "Disciplina sobre desenvolvimento de habilidades socioemocionais.",
+        "professor": "Igor | Antão"
     },
     {
         "id": 56,
@@ -175,7 +178,8 @@
         "acronym": "HS2",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Continuação do desenvolvimento de habilidades socioemocionais."
+        "description": "Continuação do desenvolvimento de habilidades socioemocionais.",
+        "professor":"Igor | Franklin"
     },
     {
         "id": 57,
@@ -183,7 +187,8 @@
         "acronym": "InfoSoc",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina sobre o impacto da informática na sociedade e suas implicações éticas."
+        "description": "Disciplina sobre o impacto da informática na sociedade e suas implicações éticas.",
+        "professor": "Francilene Procópio"
     },
     {
         "id": 58,
@@ -266,7 +271,8 @@
         "acronym": "Prática I",
         "type": "OPTATIVE",
         "available": true,
-        "description": "Disciplina que visa a prática de ensino de computação."
+        "description": "Disciplina que visa a prática de ensino de computação.",
+        "professor": "Melina Mongiovi | Leandro Balby"
     },
     {
         "id": 68,
@@ -274,7 +280,8 @@
         "acronym": "Prática II",
         "type": "OPTATIVE",
         "available": true,
-        "description": "Disciplina que visa a prática de ensino de computação."
+        "description": "Disciplina que visa a prática de ensino de computação.",
+        "professor": "Melina Mongiovi | Leandro Balby"
     },
     {
         "id": 69,
@@ -310,7 +317,7 @@
         "type": "OPTATIVE",
         "available": false,
         "description": "Disciplina que estuda a programação para web.",
-        "professor": "Dalton | Demétrio Mestre"
+        "professor": "Dalton Serey | Demétrio Mestre"
     },
     {
         "id": 73,
@@ -327,7 +334,8 @@
         "acronym": "ProjRedes",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina que estuda o projeto de redes de computadores."
+        "description": "Disciplina que estuda o projeto de redes de computadores.",
+        "professor": "Thiago Nóbrega"
     },
     {
         "id": 75,
@@ -343,7 +351,8 @@
         "acronym": "POI",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina que aborda os aspectos de provisionamento e manutenção de infraestrutura de TI."
+        "description": "Disciplina que aborda os aspectos de provisionamento e manutenção de infraestrutura de TI.",
+        "professor": "Fábio"
     },
     {
         "id": 77,
@@ -351,15 +360,17 @@
         "acronym": "Redes Neurais",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina sobre técnicas de reconhecimento de padrões e aprendizado em redes neurais."
+        "description": "Disciplina sobre técnicas de reconhecimento de padrões e aprendizado em redes neurais.",
+        "professor": "Herman"
     },
     {
         "id": 78,
         "name": "Recuperação de Informação e Busca na Web",
-        "acronym": "RI",
+        "acronym": "RecInfo",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina sobre técnicas de recuperação de informações e mecanismos de busca na web."
+        "description": "Disciplina sobre técnicas de recuperação de informações e mecanismos de busca na web.",
+        "professor" : "Cláudio Elízio Calazans Campelo"
     },
     {
         "id": 79,
@@ -367,7 +378,8 @@
         "acronym": "Segurança",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina sobre práticas e técnicas de segurança em sistemas de informação."
+        "description": "Disciplina sobre práticas e técnicas de segurança em sistemas de informação.",
+        "professor": "Andrey Elísio"
     },
     {
         "id": 80,
@@ -401,7 +413,8 @@
         "acronym": "TD",
         "type": "OPTATIVE",
         "available": false,
-        "description": "Disciplina sobre o impacto da transformação digital nos negócios e na sociedade."
+        "description": "Disciplina sobre o impacto da transformação digital nos negócios e na sociedade.",
+        "professor": "Francilene Procópio"
     },
     {
         "id": 84,

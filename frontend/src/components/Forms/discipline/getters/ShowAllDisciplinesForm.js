@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { SquarePen, Trash2, EyeIcon } from 'lucide-react';
 import { deleteDisciplineRoute, getAllDisciplinesRoute } from '../../../../routes/DisciplineRoutes';
 import { useNavigate } from 'react-router-dom';
-import { toPascalCase } from './ShowOneDisciplineForm.js'
+import { toPortuguese } from './ShowOneDisciplineForm.js'
 import { useNotificationApi } from "../../../Alert"
 import ShowOneDisciplineForm from './ShowOneDisciplineForm.js'
 import './style.css';
@@ -84,7 +84,7 @@ const ShowAllDisciplinesForm =  () => {
 
       {filteredCards.map((card, index) => (
         <div key={index} className="discipline-card">
-          ({toPascalCase(card.type)}) <strong>{card.name}</strong> ({card.acronym})
+          ({toPortuguese(card.type)}) <strong>{card.name}</strong> ({card.acronym})
           <div className='buttons-put-delete-discipline' style={{padding: '0.5rem'}}>
             <button id='see-discipline' className='see-icon' onClick={() => showModal(card)}><EyeIcon /></button>
             <button id='patch-discipline' className='edit-icon' onClick={handlePatch}><SquarePen/></button>
@@ -101,11 +101,11 @@ const ShowAllDisciplinesForm =  () => {
         />
       )}
 
-      <div className='pagination'>
+      {/* <div className='pagination'>
         <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}>Anterior</button>
         <span>Página {page + 1} de {totalPages}</span>
         <button onClick={() => setPage(p => (p + 1 < totalPages ? p + 1 : p))} disabled={page + 1 >= totalPages}>Próxima</button>
-      </div>
+      </div> */}
     </div>
 )};
 

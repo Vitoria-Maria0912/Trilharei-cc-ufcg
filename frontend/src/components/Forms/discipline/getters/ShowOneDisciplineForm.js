@@ -8,7 +8,6 @@ const ShowOneDisciplineForm =  ({ discipline, open, onClose }) => {
   return (
     <>
       <Modal 
-        // title={`${ discipline.name }`}
         open={ open }
         onCancel={ onClose }
         destroyOnClose={ false }
@@ -41,4 +40,4 @@ const ShowOneDisciplineForm =  ({ discipline, open, onClose }) => {
 };
 
 export default ShowOneDisciplineForm;
-export { toPascalCase };
+export { toPascalCase, toPortuguese };

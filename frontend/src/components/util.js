@@ -1,3 +1,5 @@
+import { getAllDisciplinesRoute } from "../routes/DisciplineRoutes";
+
 export const defaultPeriodStructure = {
     1: ["P1", "LP1", "FMCC1", "IC", "Direito"],
     2: ["P2", "LP2", "FMCC2", "C1", "Economia"],
@@ -21,3 +23,19 @@ export const defaultSelect = [
         ),
     }
 ];
+
+const disciplines = await getAllDisciplinesRoute();
+
+const getDisciplineIdByName = (disciplines, name) => {
+    const discipline = disciplines.find(discipline => discipline.name === name)
+    return discipline.id
+}
+
+export const handleCardHover = (disciplines, discipline) => {
+    const related = new Set();
+    
+    discipline.pre_requisites?.forEach((name) => related.add(getDisciplineIdByName(disciplines, name)));
+    discipline.post_requisites?.forEach((name) => related.add(getDisciplineIdByName(disciplines, name)));
+    
+    return [...related];
+};

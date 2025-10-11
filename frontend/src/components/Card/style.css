@@ -16,7 +16,7 @@
 
 .card:hover {
     cursor: pointer;
-    background-color: var(--button-hover-color);
+    background-color: var(--button-hover-color) !important;
 }
 
 .anticon-delete {
@@ -25,4 +25,9 @@
     right: 10px;
     font-weight: bold;
 }
+
+.card.highlighted {
+    background-color: var(--card-highlighted-color) !important;
+}
+
 
