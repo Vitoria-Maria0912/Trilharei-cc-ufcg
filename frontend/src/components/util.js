@@ -31,11 +31,25 @@ const getDisciplineIdByName = (disciplines, name) => {
     return discipline.id
 }
 
+const highlightPreRequisites = (disciplines, discipline) => {
+    const pre_requisites = new Set();
+    
+    discipline.pre_requisites?.forEach((name) => pre_requisites.add(getDisciplineIdByName(disciplines, name)));
+    
+    return [...pre_requisites];
+};
+
+const highlightPostRequisites = (disciplines, discipline) => {
+    const post_requisites = new Set();
+    
+    discipline.post_requisites?.forEach((name) => post_requisites.add(getDisciplineIdByName(disciplines, name)));
+    
+    return [...post_requisites];
+};
+
 export const handleCardHover = (disciplines, discipline) => {
-    const related = new Set();
-    
-    discipline.pre_requisites?.forEach((name) => related.add(getDisciplineIdByName(disciplines, name)));
-    discipline.post_requisites?.forEach((name) => related.add(getDisciplineIdByName(disciplines, name)));
-    
-    return [...related];
+    return {"pre_requisites": highlightPreRequisites(disciplines, discipline),
+            "post_requisites": highlightPostRequisites(disciplines, discipline)
+           }
+
 };

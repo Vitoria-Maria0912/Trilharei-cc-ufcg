@@ -26,8 +26,14 @@
     font-weight: bold;
 }
 
-.card.highlighted {
-    background-color: var(--card-highlighted-color) !important;
+.card.preRequisite {
+    background-color: var(--card-pre-req-color) !important;
 }
 
+.card.postRequisite {
+    background-color: var(--card-post-req-color) !important;
+}
 
+.card.OPTATIVE {
+    background-color: var(--card-optative-color) !important;
+}

@@ -6,8 +6,10 @@
   --dark-gray : #333333;
   --dark-blue : #06129c;
   --light-blue : #1c5dc7;
-  --light-purple : #9f5eea;
+  --light-purple : #7e22e7;
   --dark-purple : #5f3f9f;
+  --highlighted-pre-req : #420a63;
+  --highlighted-post-req : #a971d8;
 
   --font-style : -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -30,7 +32,9 @@ body {
   --button-color: var(--light-purple);
   --button-hover-color: var(--dark-purple);
   --modal-color: var(--light-purple);
-  --card-highlighted-color: var(--light-blue)
+  --card-pre-req-color: var(--highlighted-pre-req);
+  --card-post-req-color: var(--highlighted-post-req);
+  --card-optative-color: var(--dark-blue);
 }
 
 .dark-mode {
@@ -41,7 +45,9 @@ body {
   --button-color: var(--dark-blue);
   --button-hover-color: var(--light-blue);
   --modal-color: var(--dark-blue);
-  --card-highlighted-color: var(--light-purple);
+  --card-pre-req-color: var(--highlighted-pre-req);
+  --card-post-req-color: var(--highlighted-post-req);
+  --card-optative-color: var(--light-purple);
 }
 
 code {

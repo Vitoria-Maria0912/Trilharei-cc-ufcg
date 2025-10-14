@@ -1,4 +1,3 @@
-import React from 'react';
 import { CaretDownOutlined, DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import "./style.css"

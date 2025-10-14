@@ -24,7 +24,7 @@ const Planning = () => {
     const [currentPeriod, setCurrentPeriod] = useState(null);
     const [select, setSelect] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [highlightedDisciplines, setHighlightedDisciplines] = useState([]);
+    const [highlightedDisciplines, setHighlightedDisciplines] = useState({});
 
     const hasFetched = useRef(false);
 
@@ -80,8 +80,6 @@ const Planning = () => {
                         ...renamedPlannings[0],
                         periods: [...renamedPlannings[0].periods].sort((a, b) => Number(a.name) - Number(b.name)),
                     });
-
-                    console.log(renamedPlannings[0])
 
                     updateSelect(renamedPlannings);
                 } else {
@@ -280,8 +278,6 @@ const Planning = () => {
                 description: "Novo planejamento criado com sucesso.",
             });
         } catch (e) {
-            console.log(e)
-            console.error(e);
             notification.error({
                 message: "Erro!",
                 description: "Não foi possível criar um novo planejamento.",
@@ -313,7 +309,7 @@ const Planning = () => {
                 onCancel={handleCancel}
             >
                 <Space direction="vertical">
-                    <Search placeholder="Disciplina" onSearch={onSearch} style={{ width: 200 }} />
+                    <Search placeholder="Disciplina" onSearch={onSearch} />
                 </Space>
                 <div className="select-cards">
                     {Array.isArray(modalDisciplines) &&
@@ -357,12 +353,14 @@ const Planning = () => {
                                     <React.Fragment key={card.id}>
                                         <Card
                                             onHover={() => setHighlightedDisciplines(handleCardHover(disciplines, card))}
-                                            highlight={highlightedDisciplines.includes(card.id)}
+                                            onMouseLeave={() => setHighlightedDisciplines({})}
+                                            preRequisite={highlightedDisciplines["pre_requisites"]?.includes(card.id)}
+                                            postRequisite={highlightedDisciplines["post_requisites"]?.includes(card.id)}
                                             card={card}
                                             period={period.id}
                                             canDelete
                                             handleCardDelete={() => handleCardDelete(period.id, card.id)}
-                                        />
+                                            />
                                         <DropZone targetPeriod={period.id} index={index + 1} setCurrentPlanning={setCurrentPlanning} />
                                     </React.Fragment>
                                 ))}
