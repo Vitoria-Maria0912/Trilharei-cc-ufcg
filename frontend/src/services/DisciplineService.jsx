@@ -1,10 +1,10 @@
 import React from 'react';
 import { Breadcrumb } from 'antd';
 import { Outlet, Route, Routes } from 'react-router-dom';
-import DisciplineCreateForm from '../components/Forms/discipline/create-update/DisciplineCreateForm.js';
-import DisciplinePatchForm from '../components/Forms/discipline/create-update/DisciplinePatchForm.js';
-import ShowOneDisciplineForm from '../components/Forms/discipline/getters/ShowOneDisciplineForm.js';
-import ShowAllDisciplinesForm from '../components/Forms/discipline/getters/ShowAllDisciplinesForm.js';
+import DisciplineCreateForm from '../components/Forms/discipline/create-update/DisciplineCreateForm.jsx';
+import DisciplinePatchForm from '../components/Forms/discipline/create-update/DisciplinePatchForm.jsx';
+import ShowOneDisciplineForm from '../components/Forms/discipline/getters/ShowOneDisciplineForm.jsx';
+import ShowAllDisciplinesForm from '../components/Forms/discipline/getters/ShowAllDisciplinesForm.jsx';
 
 const DisciplineService = () => {
 

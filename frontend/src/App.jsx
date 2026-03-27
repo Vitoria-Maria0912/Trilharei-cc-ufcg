@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { HomeOutlined, UserOutlined, BookOutlined, BulbOutlined, LinkOutlined, MoonOutlined, SunOutlined, ReadOutlined } from '@ant-design/icons';
-import { NotificationProvider } from './components/Alert/index.js';
+import { NotificationProvider } from './components/Alert/index.jsx';
 import { Menu, Layout } from 'antd';
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { Home, About } from './components/Layout/CenterMain.js'
-import DisciplineService from './services/DisciplineService.js';
-import PlanningService from './services/PlanningService.js';
-import LoginService from './services/LoginService.js';
-import UserService from './services/UserService.js';
+import { Home, About } from './components/Layout/CenterMain.jsx'
+import DisciplineService from './services/DisciplineService.jsx';
+import PlanningService from './services/PlanningService.jsx';
+import LoginService from './services/LoginService.jsx';
+import UserService from './services/UserService.jsx';
 import './style.css';
 
 const App = () => {

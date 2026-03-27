@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { SquarePen, Trash2, EyeIcon } from 'lucide-react';
 import { deleteDisciplineRoute, getAllDisciplinesRoute } from '../../../../routes/DisciplineRoutes';
 import { useNavigate } from 'react-router-dom';
-import { toPortuguese } from './ShowOneDisciplineForm.js'
+import { toPortuguese } from './ShowOneDisciplineForm.jsx'
 import { useNotificationApi } from "../../../Alert"
-import ShowOneDisciplineForm from './ShowOneDisciplineForm.js'
+import ShowOneDisciplineForm from './ShowOneDisciplineForm.jsx'
 import './style.css';
 
 const ShowAllDisciplinesForm =  () => {

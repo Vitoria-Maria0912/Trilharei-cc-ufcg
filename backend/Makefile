@@ -6,20 +6,31 @@ create-docker-container:
 create-podman-container:
 	podman run -d --name optatives_cc_ufcg -p 5432:5432 -e POSTGRES_PASSWORD=cc_ufcg123 -e POSTGRES_USER=postgres -e POSTGRES_DB=optatives_cc_ufcg postgres
 
+update-node:
+	npm cache clean -force
+	npm install -g n
+	n latest 
+	n stable
+
 install:
-	npm install
+	npm install 
+	npm audit fix --force
 
 run:
-	docker-compose down --remove-orphans
-	docker-compose up -d
+	docker compose down --remove-orphans
+	docker compose up -d
 	npm run dev
 
 start-run-postgres:
 	docker start postgres
 	
-prisma:
+prismaGen:
 	npx prisma generate 
-	npx prisma migrate dev --name $(name)
+	npx prisma migrate dev --name "migration"
+
+prisma-update:
+	npm i --save-dev prisma@latest
+	npm i @prisma/client@latest
 
 build-podman:
 	podman build -t backend-code .
